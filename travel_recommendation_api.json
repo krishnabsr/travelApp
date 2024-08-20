@@ -1,0 +1,80 @@
+{
+    "countries": [
+      {
+        "id": 1,
+        "name": "India",
+        "cities": [
+          {
+            "name": "India Gate, India",
+            "imageUrl": "image/india.jpg",
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+          },
+          {
+            "name": "Tasj Hotel, India",
+            "imageUrl": "image/india.jpg",
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Japan",
+        "cities": [
+          {
+            "name": "Tokyo, Japan",
+            "imageUrl": "image/india.jpg",
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+          },
+          {
+            "name": "Kyoto, Japan",
+            "imageUrl": "image/india.jpg",
+            "description": "Known for its historic temples, gardens, and traditional tea houses."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Brazil",
+        "cities": [
+          {
+            "name": "Rio de Janeiro, Brazil",
+            "imageUrl": "image/india.jpg",
+            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+          },
+          {
+            "name": "São Paulo, Brazil",
+            "imageUrl": "image/india.jpg",
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+          }
+        ]
+      }
+    ],
+    "temples": [
+      {
+        "id": 1,
+        "name": "Hampi, INDIA",
+        "imageUrl": "image/temp2.jpg",
+        "description": "Virupaksha Temple is located in Hampi in the Vijayanagara district of Karnataka, India. It is part of the Group of Monuments at Hampi, designated as a UNESCO World Heritage Site. The temple is dedicated to Sri Virupaksha."
+      },
+      {
+        "id": 2,
+        "name": "Somnath Temple , India",
+        "imageUrl": "image/temple1.jpg",
+        "description": "Somnath temple or Deo Patan, is a Hindu temple located in Prabhas Patan, Veraval in Gujarat, India. It is one of the most sacred pilgrimage sites the Tirtha Kshetra for Hindus and is the first among the twelve jyotirlinga shrines of Shiva."
+      }
+    ],
+    "beaches": [
+      {
+        "id": 1,
+        "name": "Calangute, Town in Goa",
+        "imageUrl": "image/cal.jpg",
+        "description": "Calangute is a town in the western Indian state of Goa. Standing on the shores of the Arabian Sea, it’s home to long, sandy Calangute Beach, lined with restaurants and bars. Farther north, Baga Beach is a popular spot for water sports."
+      },
+      {
+        "id": 2,
+        "name": "Lakshadweep",
+        "imageUrl": "image/lak.jpg",
+        "description": "Lakshadweep is a tropical archipelago of 36 atolls and coral reefs in the Laccadive Sea, off the coast of Kerala, India. Not all of the islands are inhabited, and only a few are open to visitors (permits required). Kavaratti, one of the more developed islands,"
+      }
+    ]
+  }
