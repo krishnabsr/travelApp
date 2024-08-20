@@ -1,31 +1,31 @@
-const clearButton = document.getElementById('clear-btn')
-const input_search = document.getElementById("input-search")
-const search_btn = document.getElementById("search-btn")
+const clear_Button = document.getElementById('clear-btn')
+const searchInput = document.getElementById("input-search")
+const searchButton = document.getElementById("search-btn")
 
-clearButton.addEventListener("click", () => {
-    input_search.value = '';
+clear_Button.addEventListener("click", () => {
+    searchInput.value = '';
 });
 
-search_btn.addEventListener("click", search_btn_functions);
+searchButton.addEventListener("click", searchButton_fn);
 
-function search_btn_functions() {
+function searchButton_fn() {
     fetch('travel_recommendation_api.json').then(function (response) {
         return response.json()
     }).then(function (data) {
-        let recommendations = [];
-        let input_search_new = input_search.value.toLowerCase()
-        if (input_search_new === 'beach') {
-            recommendations = data.beaches;
-        } else if (input_search_new === 'temple') {
-            recommendations = data.temples;
-        } else if (input_search_new === 'country') {
-            recommendations = data.countries;
+        let recommendationsArray = [];
+        let searchInput_new = searchInput.value.toLowerCase()
+        if (searchInput_new === 'beach') {
+            recommendationsArray = data.beaches;
+        } else if (searchInput_new === 'temple') {
+            recommendationsArray = data.temples;
+        } else if (searchInput_new === 'country') {
+            recommendationsArray = data.countries;
         }
 
         let recommendationHtml = '';
 
-        if (recommendations.length > 0) {
-            for (const recommendation of recommendations) {
+        if (recommendationsArray.length > 0) {
+            for (const recommendation of recommendationsArray) {
                 recommendationHtml += `
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <div class="col">
@@ -41,9 +41,9 @@ function search_btn_functions() {
                     `;
             }
         } else {
-            recommendationHtml = '<p>No recommendations found.</p>';
+            recommendationHtml = '<p>No recommendationsArray found.</p>';
         }
-        console.log(recommendations.length)
+        console.log(recommendationsArray.length)
         console.log('recommendationHtml-->', recommendationHtml)
         document.getElementById('recommendation').innerHTML = recommendationHtml;
 
@@ -55,24 +55,24 @@ function search_btn_functions() {
     })
 }
 
-function getRecommendation() {
+function getRecommendations() {
     const searchTerm = document.getElementById('search').value.toLowerCase();
-    let recommendations = [];
+    let recommendationsArray = [];
 
     if (searchTerm === 'beach') {
-        recommendations = data.beaches;
+        recommendationsArray = data.beaches;
     } else if (searchTerm === 'temple') {
-        recommendations = data.temples;
+        recommendationsArray = data.temples;
     } else if (searchTerm === 'country') {
-        recommendations = data.countries;
+        recommendationsArray = data.countries;
     } else {
-        recommendations = [];
+        recommendationsArray = [];
     }
 
     let recommendationHtml = '';
 
-    if (recommendations.length > 0) {
-        for (const recommendation of recommendations) {
+    if (recommendationsArray.length > 0) {
+        for (const recommendation of recommendationsArray) {
             recommendationHtml += `
                         <h2>${recommendation.name}</h2>
                         <img src="${recommendation.imageUrl}" alt="Image of ${recommendation.name}">
@@ -80,7 +80,7 @@ function getRecommendation() {
                     `;
         }
     } else {
-        recommendationHtml = '<p>No recommendations found.</p>';
+        recommendationHtml = '<p>No recommendationsArray found.</p>';
     }
 
     document.getElementById('recommendation').innerHTML = recommendationHtml;
